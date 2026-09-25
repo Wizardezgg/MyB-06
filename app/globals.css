@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Theme Variables --- */
+:root {
+  --background: #0b0c0e;
+  --foreground: #f3f4f6;
+}
+
+/* --- Base Layout --- */
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- Scroll Behavior --- */
+html {
+  scroll-behavior: smooth;
+}

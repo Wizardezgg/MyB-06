@@ -3,6 +3,7 @@ import { Oswald, Inter } from "next/font/google";
 import "./globals.css";
 import { WorkoutPlanProvider } from "@/context/WorkoutPlanContext";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -34,10 +35,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${oswald.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-[#0B0C0E] text-zinc-100 antialiased flex flex-col">
+      <body className="min-h-screen bg-white text-zinc-900 antialiased flex flex-col">
         <WorkoutPlanProvider>
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 bg-white">{children}</main>
+          <Footer />
         </WorkoutPlanProvider>
       </body>
     </html>

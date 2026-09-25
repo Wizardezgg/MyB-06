@@ -1,0 +1,40 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Next.js build output
+/.next/
+/out/
+
+# Production
+/build
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local environment variables
+.env*.local
+.env
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# OS & Editor files
+.DS_Store
+*.pem
+Thumbs.db
+.vscode/
+.idea/
+
+# Internal scratch & temporary files (Strictly ignored so they are never committed or uploaded to GitHub)
+/.internal-scratch/
+/temp_files/
+
+# Design files (Ignored from GitHub repository)
+/UI/
+/ui/

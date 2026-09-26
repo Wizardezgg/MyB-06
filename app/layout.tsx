@@ -36,10 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${oswald.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-white text-zinc-900 antialiased flex flex-col">
+      <body className="min-h-screen bg-[#0B0C0E] text-zinc-100 antialiased flex flex-col">
         <WorkoutPlanProvider>
           <Navbar />
-          <main className="flex-1 bg-white">{children}</main>
+          <main className="flex-1 bg-[#0B0C0E]">{children}</main>
           <Footer />
           <Toaster richColors position="top-right" theme="dark" />
         </WorkoutPlanProvider>

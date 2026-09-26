@@ -74,7 +74,7 @@ export const Navbar: React.FC = () => {
           </Link>
 
           <Link
-            href="/my-plan?tab=saved"
+            href="/my-plan"
             className="flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors"
           >
             <span>Saved</span>

@@ -16,7 +16,7 @@ export const WorkoutDetailActions: React.FC<WorkoutDetailActionsProps> = ({ work
   const saved = isSaved(workout.id);
 
   return (
-    <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-zinc-800/80">
+    <div className="flex flex-wrap items-center gap-3 mt-6">
       
       {/* Add To Plan Button */}
       <button

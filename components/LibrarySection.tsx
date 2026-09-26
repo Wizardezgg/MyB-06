@@ -42,15 +42,15 @@ export const LibrarySection: React.FC = () => {
   };
 
   return (
-    <section id="library" className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 bg-white">
+    <section id="library" className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
       
       {/* Section Header & Controls */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
         <div>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-zinc-950">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
             THE LIBRARY
           </h2>
-          <p className="mt-1 text-sm text-zinc-500 font-sans">
+          <p className="mt-1 text-sm text-zinc-400 font-sans">
             Twelve lifts covering every major muscle group.
           </p>
         </div>
@@ -59,7 +59,7 @@ export const LibrarySection: React.FC = () => {
         <div className="relative">
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-800 text-xs font-medium text-zinc-200 hover:bg-black transition-all"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#14161E] border border-zinc-800 text-xs font-medium text-zinc-200 hover:border-zinc-700 transition-all"
           >
             <span className="text-zinc-400">Sort By:</span>
             <span className="font-semibold text-white">{sortLabels[sortBy]}</span>

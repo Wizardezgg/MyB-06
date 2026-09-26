@@ -26,8 +26,6 @@ interface WorkoutPlanContextType {
 
 const WorkoutPlanContext = createContext<WorkoutPlanContextType | undefined>(undefined);
 
-export const MAX_PLAN_LIFTS = 5;
-
 export const WorkoutPlanProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [todayPlan, setTodayPlan] = useState<Workout[]>([]);
   const [savedWorkouts, setSavedWorkouts] = useState<Workout[]>([]);
@@ -87,48 +85,42 @@ export const WorkoutPlanProvider: React.FC<{ children: React.ReactNode }> = ({ c
   // --- Plan Actions ---
   const addToTodayPlan = (workout: Workout): boolean => {
     if (isInTodayPlan(workout.id)) {
-      toast.info(`"${workout.name}" is already in your Today's Plan`);
-      return false;
-    }
-    if (todayPlan.length >= MAX_PLAN_LIFTS) {
-      toast.error(`Plan limit reached! Maximum of ${MAX_PLAN_LIFTS} lifts allowed for today.`);
+      toast.info("Already added to today's plan");
       return false;
     }
     setTodayPlan((prev) => [...prev, workout]);
-    toast.success(`"${workout.name}" added to today's plan!`);
+    toast.success("Added to today's plan");
     return true;
   };
 
   const removeFromTodayPlan = (workoutId: number) => {
-    const item = todayPlan.find((w) => w.id === workoutId);
     setTodayPlan((prev) => prev.filter((w) => w.id !== workoutId));
     setCompletedWorkoutIds((prev) => prev.filter((id) => id !== workoutId));
-    toast.success(item ? `Removed "${item.name}" from today's plan` : "Removed from today's plan");
+    toast.success("Removed from today's plan");
   };
 
   const saveWorkout = (workout: Workout): boolean => {
     if (isSaved(workout.id)) {
-      toast.info(`"${workout.name}" is already in your Saved list`);
+      toast.info("Already saved for later");
       return false;
     }
     setSavedWorkouts((prev) => [...prev, workout]);
-    toast.success(`"${workout.name}" saved for later!`);
+    toast.success("Saved for later");
     return true;
   };
 
   const removeFromSaved = (workoutId: number) => {
-    const item = savedWorkouts.find((w) => w.id === workoutId);
     setSavedWorkouts((prev) => prev.filter((w) => w.id !== workoutId));
-    toast.success(item ? `Removed "${item.name}" from saved list` : "Removed from saved");
+    toast.success("Removed from saved");
   };
 
   const toggleMarkAsDone = (workoutId: number) => {
     if (completedWorkoutIds.includes(workoutId)) {
       setCompletedWorkoutIds((prev) => prev.filter((id) => id !== workoutId));
-      toast.info("Marked as in-progress");
+      toast.info("Unmarked");
     } else {
       setCompletedWorkoutIds((prev) => [...prev, workoutId]);
-      toast.success("Marked as Done! Great work!");
+      toast.success("Marked as Done");
     }
   };
 

@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { fetchWorkoutById } from "@/lib/api";
-import { ArrowLeft, Plus, Bookmark } from "lucide-react";
+import { WorkoutDetailActions } from "@/components/WorkoutDetailActions";
+import { ArrowLeft } from "lucide-react";
 
 interface WorkoutDetailsPageProps {
   params: Promise<{ id: string }>;
@@ -111,23 +112,7 @@ export default async function WorkoutDetailsPage({ params }: WorkoutDetailsPageP
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-zinc-800/80">
-              <button
-                type="button"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gym-accent hover:bg-gym-accentHover text-black font-display font-bold text-xs uppercase tracking-wider transition-all duration-200 hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(204,255,0,0.25)]"
-              >
-                <Plus className="w-4 h-4 stroke-[3]" />
-                <span>Add to today&apos;s plan</span>
-              </button>
-
-              <button
-                type="button"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-transparent border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/60 text-white font-display font-semibold text-xs uppercase tracking-wider transition-all duration-200 active:scale-95"
-              >
-                <Bookmark className="w-4 h-4" />
-                <span>Save for later</span>
-              </button>
-            </div>
+            <WorkoutDetailActions workout={workout} />
 
           </div>
 

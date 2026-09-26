@@ -4,6 +4,7 @@ import "./globals.css";
 import { WorkoutPlanProvider } from "@/context/WorkoutPlanContext";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { Toaster } from "sonner";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1 bg-white">{children}</main>
           <Footer />
+          <Toaster richColors position="top-right" theme="dark" />
         </WorkoutPlanProvider>
       </body>
     </html>

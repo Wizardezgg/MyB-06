@@ -22,7 +22,7 @@ export const WorkoutDetailActions: React.FC<WorkoutDetailActionsProps> = ({ work
       <button
         type="button"
         onClick={() => addToTodayPlan(workout)}
-        className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-display font-bold text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 shadow-[0_0_20px_rgba(204,255,0,0.25)] ${
+        className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-display font-bold text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 shadow-[0_0_20px_rgba(204,255,0,0.25)] ${
           inPlan
             ? "bg-gym-accent text-black hover:bg-gym-accentHover"
             : "bg-gym-accent hover:bg-gym-accentHover text-black hover:scale-[1.02]"
@@ -36,7 +36,7 @@ export const WorkoutDetailActions: React.FC<WorkoutDetailActionsProps> = ({ work
       <button
         type="button"
         onClick={() => saveWorkout(workout)}
-        className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border font-display font-semibold text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 ${
+        className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border font-display font-semibold text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 ${
           saved
             ? "bg-zinc-800/80 border-amber-400/80 text-amber-400"
             : "bg-transparent border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/60 text-white"

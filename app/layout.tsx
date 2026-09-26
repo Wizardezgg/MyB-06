@@ -8,14 +8,12 @@ import { Toaster } from "sonner";
 
 const oswald = Oswald({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   variable: "--font-oswald",
   display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   variable: "--font-inter",
   display: "swap",
 });

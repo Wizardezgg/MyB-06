@@ -46,7 +46,7 @@ export default async function WorkoutDetailsPage({ params }: WorkoutDetailsPageP
           
           {/* Left Column: Visual */}
           <div className="lg:col-span-6 w-full flex flex-col">
-            <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:h-full min-h-[480px] sm:min-h-[560px] lg:min-h-[640px] rounded-2xl md:rounded-3xl overflow-hidden bg-[#14161E] border border-zinc-800 shadow-2xl">
+            <div className="relative w-full aspect-[4/5] sm:aspect-[4/3] lg:aspect-auto lg:h-full min-h-[320px] sm:min-h-[440px] lg:min-h-[640px] rounded-2xl md:rounded-3xl overflow-hidden bg-[#14161E] border border-zinc-800 shadow-2xl">
               <Image
                 src={workout.image}
                 alt={workout.name}

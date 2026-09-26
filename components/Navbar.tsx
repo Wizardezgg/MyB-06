@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
+        <Link href="/" className="flex items-center gap-2 group shrink-0">
           <div className="relative w-6 h-6 flex items-center justify-center">
             <Image
               src="/assets/logo.png"
@@ -31,16 +31,16 @@ export const Navbar: React.FC = () => {
               className="object-contain"
             />
           </div>
-          <span className="font-display text-xl font-bold tracking-wider text-white">
+          <span className="font-display text-lg sm:text-xl font-bold tracking-wider text-white">
             FITLOG
           </span>
         </Link>
 
         {/* Navigation Links */}
-        <nav className="flex items-center gap-3">
+        <nav className="flex items-center gap-1 sm:gap-3">
           <Link
             href="/"
-            className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all ${
+            className={`px-2.5 sm:px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-medium transition-all ${
               isWorkoutsActive
                 ? "bg-[#182313] text-gym-accent font-semibold"
                 : "text-zinc-400 hover:text-white"
@@ -51,7 +51,7 @@ export const Navbar: React.FC = () => {
 
           <Link
             href="/my-plan"
-            className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all ${
+            className={`px-2.5 sm:px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-medium transition-all ${
               isMyPlanActive
                 ? "bg-[#182313] text-gym-accent font-semibold"
                 : "text-zinc-400 hover:text-white"
@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
         </nav>
 
         {/* Status Counters */}
-        <div className="flex items-center gap-4 text-xs font-medium">
+        <div className="flex items-center gap-2.5 sm:gap-4 text-[11px] sm:text-xs font-medium shrink-0">
           <Link
             href="/my-plan"
             className="flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors"

@@ -3,12 +3,22 @@
 import React from "react";
 import { useWorkoutPlan } from "@/context/WorkoutPlanContext";
 
-export const PlanMetrics: React.FC = () => {
-  const { todayPlanMetrics, isHydrated } = useWorkoutPlan();
+interface PlanMetricsProps {
+  activeTab?: "today" | "saved";
+}
 
-  const exercises = isHydrated ? todayPlanMetrics.totalExercises : 0;
-  const minutes = isHydrated ? todayPlanMetrics.totalMinutes : 0;
-  const calories = isHydrated ? todayPlanMetrics.totalCalories : 0;
+export const PlanMetrics: React.FC<PlanMetricsProps> = ({ activeTab = "today" }) => {
+  const { todayPlan, savedWorkouts, isHydrated } = useWorkoutPlan();
+
+  const currentList = activeTab === "saved" ? savedWorkouts : todayPlan;
+
+  const exercises = isHydrated ? currentList.length : 0;
+  const minutes = isHydrated
+    ? currentList.reduce((acc, curr) => acc + (Number(curr.duration) || 0), 0)
+    : 0;
+  const calories = isHydrated
+    ? currentList.reduce((acc, curr) => acc + (Number(curr.caloriesBurned) || 0), 0)
+    : 0;
 
   const metrics = [
     {

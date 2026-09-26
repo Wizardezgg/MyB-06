@@ -44,7 +44,7 @@ function MyPlanContent() {
         </div>
 
         {/* Metrics Summary Row */}
-        <PlanMetrics />
+        <PlanMetrics activeTab={activeTab} />
 
         {/* Tabs */}
         <div className="flex items-center gap-2 border-b border-zinc-800 pb-3 mb-6">

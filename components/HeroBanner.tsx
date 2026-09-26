@@ -13,8 +13,8 @@ export const HeroBanner: React.FC = () => {
               WORKOUT LIBRARY
             </span>
 
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase text-white tracking-tight leading-[1.05] mb-6">
-              TRAIN WITH INTENT. LOG<br />EVERY SET.
+            <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase text-white tracking-tight leading-[1.05] mb-6">
+              TRAIN WITH INTENT. LOG<br className="hidden sm:inline" /> EVERY SET.
             </h1>
 
             <p className="text-zinc-400 font-sans text-sm sm:text-base max-w-md leading-relaxed mb-8">

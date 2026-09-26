@@ -6,8 +6,8 @@ A no-nonsense gym companion application built with Next.js App Router and Tailwi
 
 ## Live Links
 
-- Live Demo:
-- GitHub Repository:
+- Live Demo: https://ftlog.vercel.app/
+- GitHub Repository: https://github.com/Wizardezgg/MyB-06
 
 ---
 
